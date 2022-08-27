@@ -12,3 +12,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.eminent_form{
+  font-size: 14px;
+  text-align: center;
+  height: 35px;
+  color: white;
+  background: black;
+  background-color: #132331;
+  color: #fff;
+  padding: 0px 30px;
+  font-size: larger;
+  font-weight: 500;
+  width: 18%;
+  width: fit-content;
+  margin: 30px auto;
+}
+.form-group_1{
+  margin-top: 25px;
+}
+.BUTTONS{
+  display: flex;
+    gap: 43%;
+    margin: 40px 0px 0px 50px;
+}
+.btn2{
+  margin-left: 650px;
+}

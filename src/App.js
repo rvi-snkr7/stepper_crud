@@ -1,5 +1,5 @@
 import './App.css';
-import Personality from './component/linearstepper';
+// import Personality from './component/linearstepper';
 // import {CssBaseline, Container,Paper,Box} from "@mui/material";
 import React from 'react';
 // import Ravi from './component/User';
@@ -11,16 +11,11 @@ function App() {
     <div className="App">
       <>
       <header className='header'>
-      <div>
-        <box>
+        <div className="eminent_form">
           <h2>Eminent Personality Form</h2>
-        </box>
-          <h3>Form to be filled</h3>
-      
         </div>
+          <h3>Form to be filled</h3>
       </header>
-      
-      {/* <Personality/> */}
      <Userform/>
       </>
     </div>
