@@ -2,10 +2,11 @@ import React, {useState } from "react";
 import axios from "axios";
 import {Formik,Form, Field,FormikConfig,FormikValues} from 'formik';
 import TextField from '@mui/material/TextField';
-import { Button } from "@mui/material";
+import { Button, StepContent } from "@mui/material";
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
+// import StepContent from '@mui/material/StepContent';
 
 
 
@@ -90,6 +91,7 @@ return(
                     <Step>
                         <StepLabel>Personal Details</StepLabel>
                           <div className="personal-details">
+                            <StepContent>
                              <Field onChange={(e)=>handle(e)} id="name" value={deta.name} placeholder="Name" name="name" type='text' component={TextField}/>
                              <Field onChange={(e)=>handle(e)} id="gender" value={deta.gender} placeholder="Gender" type='text' component={TextField}/>
                              <Field onChange={(e)=>handle(e)} id="Religion" value={deta.Religion} placeholder="Religion" type='text' component={TextField}/>
@@ -99,24 +101,29 @@ return(
                              <Field onChange={(e)=>handle(e)} id="mother" value={deta.mother} placeholder="Mother" type='text'component={TextField}/>
                              <Field onChange={(e)=>handle(e)} id="spouse" value={deta.spouse} placeholder="Spouse" type='text' component={TextField}/>
                              <Field onChange={(e)=>handle(e)} id="children" value={deta.children} placeholder="Children" type='number' component={TextField}/>
+                             </StepContent>
                           </div>
                     </Step>
                 
                      <Step>
                          <StepLabel>Communication Details</StepLabel>
                          <div classname="communication-detail">
+                          <StepContent>
                            <Field onChange={(e)=>handle(e)} id="number" value={deta.number} placeholder="Number" type='number' component={TextField}/>
                            <Field onChange={(e)=>handle(e)} id="email" value={deta.email} placeholder="Email" type='text' component={TextField}/>
+                           </StepContent>
                          </div>
                      </Step> 
 
                      <Step>
                       <StepLabel>Professional Details</StepLabel>
                         <div className="professional-detail">
+                          <StepContent>
                           <Field onChange={(e)=>handle(e)} id="degree" value={deta.degree} placeholder="Degree" type='text' component={TextField}/>
                           <Field onChange={(e)=>handle(e)} id="course" value={deta.course} placeholder="Course" type='text' component={TextField}/>
                           <Field onChange={(e)=>handle(e)} id="startyear" value={deta.startyear} placeholder="Startyear" type='text' component={TextField}/>
                           <Field onChange={(e)=>handle(e)} id="endyear" value={deta.endyear} placeholder="Endyear" type='text' component={TextField}/>
+                          </StepContent>
                         </div>
                      </Step>
                      <Step>
