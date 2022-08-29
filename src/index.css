@@ -38,3 +38,93 @@ code {
 .btn2{
   margin-left: 650px;
 }
+.FORM{
+  height: 680px;
+}
+.steper-context{
+  width: 400%;
+}
+.steper-context h3{
+  margin-left: -85%;
+}
+.step-button{
+  display: flex;
+ gap: 45%;
+ margin-left: 10px;
+}
+.step-button button{
+  color: white;
+  background-color: orangered;
+}
+.steper1-name{
+  margin-left: -80%;
+}
+.steper1-name fieldset{
+  /* margin-left: -80%; */
+  width: 770px;
+  color: red;
+}
+.steper1-G-R{
+  display: flex;
+  margin: 1% 0% 0% 0%;
+  gap: 58%;
+}
+.steper1-G-R fieldset{
+  /* display: flex;
+  margin: 1% 0% 0% 0%;
+  gap: 15%; */
+  width: 770px;
+}
+.Steper1-gr{
+  /* display: inline; */
+  margin-left: -80%;
+  margin-top: 1%;
+}
+.Steper1-gr fieldset{
+width: 1590px;
+}
+.steper1-gr-gap{
+  margin-top: 1%;
+}
+.steper-context1 h3{
+  margin-left: -85%;
+}
+.steper-context1{
+  margin: 0% 0% 0% -90%;
+  width: 571%;
+  /* background-color: red; */
+}
+.steper1-N-E{
+  display: flex;
+  margin: 1% 0% 0% 0%;
+  gap: 38%;
+}
+.steper1-N-E fieldset{
+  /* display: flex;
+  margin: 1% 0% 0% 0%;
+  gap: 15%; */
+  width: 740px;
+}
+.steper-context2 h3{
+  margin-left: -85%;
+}
+.steper-context2 p{
+  margin-left: -92%;
+}
+.steper-context2{
+  margin: 0% 0% 0% -200%;
+  width: 580%;
+  /* background-color: red; */
+}
+.SUBMIT{
+  margin: 80% 0% 0% -500%;
+  width: 555%;
+}
+.SUBMIT-P{
+  margin: 20% 0% 0% -300%;
+  width: 555%;
+}
+.SUBMIT-G{
+  margin: 20% 0% 0% -408%;
+  width: 555%;
+}

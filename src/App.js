@@ -1,6 +1,6 @@
 import './App.css';
-import Personality from './component/linearstepper';
-import HorizontalLinearStepper from './component/linearstepper';
+// import Personality from './component/linearstepper';
+// import HorizontalLinearStepper from './component/linearstepper';
 // import {CssBaseline, Container,Paper,Box} from "@mui/material";
 import React from 'react';
 // import Ravi from './component/User';
@@ -17,9 +17,9 @@ function App() {
         </div>
           <h3>Form to be filled</h3>
       </header>
-      {/* <HorizontalLinearStepper/> */}
-      {/* <Personality/> */}
-     <Userform/>
+      <body>
+        <Userform/>
+      </body>
       </>
     </div>
   );
