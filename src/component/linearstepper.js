@@ -5,6 +5,12 @@ import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import Select from '@mui/material/Select';
+import { InputLabel, MenuItem } from '@mui/material';
+// import RemoveIcon from '@mui/icons-material';
+
+
 
 function HorizontalLinearStepper() {
   const[activeStep,setActiveStep]= React.useState(0)
@@ -27,7 +33,13 @@ function HorizontalLinearStepper() {
         <Step>
           <StepLabel>Personal Details</StepLabel>
           <form>
-            <input value={"name"}></input>
+            {/* <input type={"text"}>name</input> */}
+            <InputLabel id='hello'>Name</InputLabel>
+            <select value={""}
+            label="name" >
+              <MenuItem value={"ravi"}>Ravi</MenuItem>
+              <MenuItem value={"shankar"}>Shankar</MenuItem>
+            </select>
           </form>
         </Step>
         <Step>

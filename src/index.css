@@ -39,7 +39,7 @@ code {
   margin-left: 650px;
 }
 .FORM{
-  height: 680px;
+  height: 880px;
 }
 .steper-context{
   width: 400%;
@@ -127,4 +127,30 @@ width: 1590px;
 .SUBMIT-G{
   margin: 20% 0% 0% -408%;
   width: 555%;
+}
+.steper1-G-R-D{
+  /* background-color: red; */
+    display: flex;
+    width: 153%;
+    margin-top: 1%;
+    height: 12%;
+    gap: 46%;
+}
+.steper1-G-R-D fieldset{
+    width: 770px;
+   
+   
+}
+#Religion{
+  height: 49px;
+  width: 790px;
+  margin-left: -130px;
+  margin-top: 4px;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 0px 0px 0px 20px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: grey;
+  position: absolute;
+  
 }
