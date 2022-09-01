@@ -124,16 +124,7 @@ function Userform() {
                         </div>
 
                         <div className="steper1-gr-gap">
-                         
-                          
                           <Field onChange={(e) => handle(e)} id="child" value={deta.child} placeholder="Children" type='text' name="child" component={TextField} />
-                        
-                         
-
-                        
-
-
-
                         </div>
                       </div>
 
