@@ -1,8 +1,8 @@
-import React, { Component, useState } from "react";
+import React, {  useState } from "react";
 import axios from "axios";
-import { Formik, Form, Field, FieldArray } from 'formik';
+import { Formik, Form, Field, FieldArray, } from 'formik';
 import TextField from '@mui/material/TextField';
-import { Button, InputLabel, StepContent } from "@mui/material";
+import { Button,  StepContent } from "@mui/material";
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
@@ -19,7 +19,9 @@ function Userform() {
     if (activeStep !== 0)
       setActiveStep((currentStep) => currentStep - 1)
   }
-  const [deta, setDeta] = useState([{
+
+const default_DATA = [
+  {
     name: "",
     gender: "",
     category: "",
@@ -28,21 +30,34 @@ function Userform() {
     father: "", 
     mother: "", 
     spouse: "",
-    child:"",
     number: "",
     email: "", 
     degree: "", 
     course: "", 
     startyear: "",
     endyear: ""
-  }]
-  );
+  },
+]
+const childs= {
+  son: [
+  {
+    children: '',
+  },
+],
+};
+
+// default_DATA[0].category = "ONB";
+
+console.log(default_DATA)
+
+  const [deta, setDeta] = useState(default_DATA);
+  const[child, setChild]=useState(childs);
 
   function Submit(e) {
     e.preventDefault();
     axios.post(url, {
       name:  deta.name, gender: deta.gender, Religion: deta.Religion, dob: deta.dob, father: deta.father,
-      mother: deta.mother, spouse: deta.spouse, child: deta.child,
+      mother: deta.mother, spouse: deta.spouse, childd: child.children,
       number: deta.number, email: deta.email,
        degree: deta.degree, course: deta.course, startyear: deta.startyear,
     })
@@ -51,22 +66,21 @@ function Userform() {
   }
   function handle(e) {
     const newdeta = { ...deta }
+    const newchild={...child}
     newdeta[e.target.id] = e.target.value
+    newchild[e.target.id]=e.target.value
 
     // console.log('name is:',e.target.name);
     // console.log('value is:',e.target.name);
     setDeta(newdeta)
-    console.log(deta)
+    setChild(newchild)
+    console.log(deta,child)
   }
 
   return (
     <>
       
-      <Formik initialValues={{
-        name: "", gender: "", category: "", Religion: "", dob: "", father: "", mother: "",
-        child:"",number: "",
-        email: "", degree: "", course: "", startyear: "", endyear: ""
-      }
+      <Formik initialValues={{default_DATA,childs}
       } onSubmit={(e) => Submit(e)}>
        
 
@@ -125,7 +139,33 @@ function Userform() {
                         </div>
 
                         <div className="steper1-gr-gap">
-                          <Field onChange={(e) => handle(e)} id="child" value={deta.child} placeholder="Children" type='text' name="child" component={TextField} />
+                          <Field onChange={(e) => handle(e)} id="children" value={child.children} placeholder="Children" type='text' name="children" component={TextField} />
+                              
+                          <FieldArray name="son">
+                            {({remove,push})=>(
+                              <div>
+                              {formik.son?.map((so,index)=>(
+                                <>
+                               <div className="row" key={index}>
+                                <div className="col">
+                                <Field name={`son.${index}.children`} type="text" value={child.children} onChange={(e) => handle(e)} />
+                                </div>
+                                <div>
+                                <button type="button" onClick={()=>push({children:""})}>+</button>
+                                <button
+                                    type="button"
+                                    className="secondary"
+                                    onClick={() => remove(index)}
+                                  >
+                                    X
+                                </button>
+                                </div>
+                               </div>
+                               </>
+                              ))}
+                              </div>
+                              )}
+                          </FieldArray>
                         </div>
                       </div>
 
