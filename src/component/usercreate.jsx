@@ -19,7 +19,7 @@ function Userform() {
     if (activeStep !== 0)
       setActiveStep((currentStep) => currentStep - 1)
   }
-  const [deta, setDeta] = useState({
+  const [deta, setDeta] = useState([{
     name: "",
     gender: "",
     category: "",
@@ -34,7 +34,8 @@ function Userform() {
     degree: "", 
     course: "", 
     startyear: "",
-    endyear: ""}
+    endyear: ""
+  }]
   );
 
   function Submit(e) {
