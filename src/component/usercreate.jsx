@@ -6,8 +6,7 @@ import { Button,  StepContent } from "@mui/material";
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
-// import Select from '@mui/material/Select';
-// import { Select } from "formik-material-ui";
+import Son from "./fieldarray";
 function Userform() {
   const url = "http://localhost:3000/user"
   const [activeStep, setActiveStep] = React.useState(0)
@@ -21,8 +20,7 @@ function Userform() {
   }
 
 const default_DATA = [
-  {
-    name: "",
+  {name: "",
     gender: "",
     category: "",
     Religion: "", 
@@ -140,8 +138,8 @@ console.log(default_DATA)
 
                         <div className="steper1-gr-gap">
                           <Field onChange={(e) => handle(e)} id="children" value={child.children} placeholder="Children" type='text' name="children" component={TextField} />
-                              
-                          <FieldArray name="son">
+                              <Son/>
+                          {/* <FieldArray name="son">
                             {({remove,push})=>(
                               <div>
                               {formik.son?.map((so,index)=>(
@@ -165,7 +163,7 @@ console.log(default_DATA)
                               ))}
                               </div>
                               )}
-                          </FieldArray>
+                          </FieldArray> */}
                         </div>
                       </div>
 

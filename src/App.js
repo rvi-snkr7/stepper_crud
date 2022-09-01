@@ -5,6 +5,7 @@ import React from 'react';
 // import Ravi from './component/User';
 import Userform from './component/usercreate';
 // import formikArray from './component/Formikarray';
+import Son from './component/fieldarray';
 
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
       
       {/* <Personality/> */}
      <Userform/>
+     {/* <Son></Son> */}
+
      {/* <formikArray/> */}
       </>
     </div>
